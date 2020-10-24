@@ -3,7 +3,9 @@
 int main(void){
     char c;
     int i = 0;
+    
     printf("Podaj wyrazy oddzielone spacja:\n");
+
     while(c = getchar()){
         if((c != ' ') && (c != '\n')){
             putchar(c); 

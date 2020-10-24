@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <string.h>
-#define print_exp(x) printf(#x "%d", x)
+#include <string.h> //strlen()
+
 int main(void){
     char word[65] = {0};
     unsigned char channel[7][64] = {0};
@@ -11,7 +11,13 @@ int main(void){
     scanf("%s", word);
     n = strlen(word);
     c_len = n + (8 - n % 8); //długość pojedyńczego kanału
+                            //8 - n % 8
 
+                            //int i = 4;
+                            //int x = (i == 4)? 10 : 0; -> x = 10;
+                            //int x = (i < 4)? 10 : 0; -> x = 0;
+                            //operator warunkowy ?:
+                            //00001111 & (1 << 0) = 00001111 & 00000001 = 00000001 -> true
     for(int i = 0; i < c_len; ++i){
         for(int j = 0; j < 7; ++j){
             channel[j][byte] |= (word[i] & (1 << j))? 1 << k : 0;
