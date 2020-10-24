@@ -2,7 +2,7 @@
 #include <string.h>
 
 int str_to_int(const char * buff){
-    int i = 
+    
 }
 
 int main(void){
