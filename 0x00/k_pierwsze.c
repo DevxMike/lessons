@@ -39,25 +39,16 @@ int main(void){
     ile_liczb = ile(n);
     wypelnij_pierwsze(pierwsze, n);
     
-    // for(int i = 0; i < ile_liczb; ++i){
+    //for(int i = 0; i < ile_liczb; ++i){
     //   printf("pierwsze[%d] = %d\n", i, pierwsze[i]);
     //}
     //printf("%d\n\n", ile_liczb);
+    int temp_sum = 0;
+    for(int i = 0; i < ile_liczb; ++i){
+        for(int j = 0; j < ile_liczb; ++j){
+            for(int k = 0; k < ile_liczb; ++k){
 
-    for(int a = 0; a < ile_liczb; ++a){
-        for(int b = 0; b < ile_liczb; ++b){
-            for(int c = 0; c < ile_liczb; ++c){
-                for(int d = 0; d < ile_liczb; ++d){
-                    for(int e = 0; e < ile_liczb; ++e){
-                        for(int f = 0; f < ile_liczb; ++f){
-                            for(int g = 0; g < ile_liczb; ++g){
-                                if(
-                                    (pierwsze[a] + pierwsze[a]*pierwsze[b]*pierwsze[c] + pierwsze[a]*pierwsze[b]*pierwsze[c]*pierwsze[d]*pierwsze[e]*pierwsze[f]*pierwsze[g]) == n
-                                ) {++ile_rozwiazan;}
-                            }
-                        }
-                    }
-                }
+                
             }
         }
     }
