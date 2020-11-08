@@ -15,9 +15,10 @@ void clear_buff(void){ //clear input (stdin)
     }
 }
 void transform_bytes(void){
+    int p = 8, s = 0;
+
     series = (bytes % 8)? (bytes / 8) + 1 : bytes / 8;
 
-    int p = 8, s = 0;
     for(int i = 0; i < bytes; ++i){
         int tmp = 0;
         if(--p < 0){
@@ -41,8 +42,21 @@ void get_n_bytes(void){ //get n bytes and transform them into series of bits
     clear_buff();
     transform_bytes();
 }
-void get_transformed(void){
+void get_transformed(void){ //get transformed series and validate
+    int p = 8, s = 0;
+    char bit;
 
+    for(int i = 0; i < bytes; ++i){
+        bit = getchar();
+        if(--p < 0){
+            p = 7;
+            ++s;
+        }
+        if(bit == '1'){
+            transformed_input[s] |= (1 << p);
+        }
+    }
+    clear_buff();
 }
 void compare_print_result(void){ //compare result to the input
     for(int i = 0; i < series; ++i){
