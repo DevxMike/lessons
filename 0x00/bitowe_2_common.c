@@ -25,13 +25,13 @@ void transform_bytes(void){
             p = 7;
             ++s;
         }
-        for(int j = 7; j >= 0; --j){
+        for(int j = 7; j >= 0; --j){ //1111 0000 & 1000 0000
             if(bytes_arr[i] & (1 << j)){
                 ++tmp; //get quantity
             }
         }
         if(tmp % 2){
-            transformed[s] |= (1 << p);
+            transformed[s] |= (1 << p); //s == 0, transformed[0] |= (1 << 7) = 1000 0000
         }
     }
 }
@@ -47,7 +47,7 @@ void get_transformed(void){ //get transformed series and validate
     char bit;
 
     for(int i = 0; i < bytes; ++i){
-        bit = getchar();
+        bit = getchar(); //'1' '0'
         if(--p < 0){
             p = 7;
             ++s;
@@ -70,7 +70,7 @@ void compare_print_result(void){ //compare result to the input
 void print_byte_bin(byte b, int n){ //writing single byte
     if(n > 0){
         putchar(
-            (b & (1 << (n - 1)))? '1' : '0'
+            (b & (1 << (n - 1)))? '1' : '0' 
         );
         print_byte_bin(b, n - 1);
     }
