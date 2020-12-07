@@ -99,5 +99,16 @@ int main(void){
     n2.next = &n3;
     n3.next = &n4;
     n4.next = NULL;
+    node_t* iter = &przykladowa;
+    int i = 1;
+    while(iter != NULL){
+        iter->value = i++;
+        iter = iter->next;
+    }
+    iter = &przykladowa;
+    while(iter != NULL){
+        printf("%d\n", iter->value);
+        iter = iter->next;
+    }
     return 0;
 }
