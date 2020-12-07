@@ -92,7 +92,12 @@ node_t* remove_if(node_t* list, predicate p){
 
 int main(void){
     struct node* list = NULL;
-
-
+    struct node przykladowa; 
+    struct node n1, n2, n3, n4;    
+    przykladowa.next = &n1;
+    n1.next = &n2;
+    n2.next = &n3;
+    n3.next = &n4;
+    n4.next = NULL;
     return 0;
 }
