@@ -55,11 +55,8 @@ float wykonaj_dzialanie(float a, float b, char c){
     return wynik;
 }
 
-// dodatkowo zmodyfikować funkcje powyższą tak aby zwracała wynik przez wskaźnik a później tak aby zwracała przez referencje
-// można również zmodyfikować w ten sam sposób funkcje odpowiedzialne za operacje arytmetyczne
+// ---> dodatkowo zmodyfikować funkcje powyższą tak aby zwracała wynik przez wskaźnik a później tak aby zwracała przez referencje <---
 // potestować różne możliwości
-
-//ZADANIE DO SAMODZIELNEGO WYKONANIA
 
 int main()
 {

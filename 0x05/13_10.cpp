@@ -8,12 +8,23 @@ int main(void){
     // sortowanie tablicy a następnie przeszukiwanie jej
 
     int porzadany_el;
+    bool not_found = false;
 
     cin >> porzadany_el;
     
     for(int i = 0; i < 10; ++i){
         if(tablica[i] == porzadany_el){
             cout << "Element " << porzadany_el << " znajduje sie pod indeksem " << i << endl;
+            break; //wyjście z pętli
+        }
+        if(i == 9){
+            not_found = true;
         }
     }
+
+    if(not_found){
+        cout << "Nie znaleziono elementu w tablicy.\n";
+    }
 }
+
+//doczytać o sortowaniu bąbelkowym, poprzez wybieranie i wstawianie i spróbować to zaimplementować w języku C++
