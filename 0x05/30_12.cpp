@@ -21,7 +21,9 @@ public:
     bool operator>=(unsigned x){
         return ilosc_stron >= x;
     }*/
-    operator unsigned(){
+    operator unsigned(){ //alternatywne rozwiązanie, tego co wyżej, tylko, że to jest bardziej uniwersalne,
+    //rozwiązania powyżej porównują nasz obiekt na bazie wartości "ilosc_stron" tylko dla operatorów ">" lub ">="
+    //a to przeciążenie pozwala na rzutowanie obiektu na wartość o typie unsigned
         return ilosc_stron;
     }
 };
